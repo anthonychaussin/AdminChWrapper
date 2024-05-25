@@ -8,7 +8,7 @@ namespace AdminChWrapper.Api
 {
     public partial class SearchApi
     {
-        private static readonly string JSON_PATH = @".\resources\organisations.json";
+        private static readonly string JSON_PATH = Path.Combine(".", "resources", "organisations.json");
         private static readonly byte[] BRACKETBYTE = Encoding.UTF8.GetBytes("]");
         public Dictionary<int, organisationType> Organisations { get; set; } = [];
         public List<int> BadVAT { get; set; } = new List<int>() { 0, 1001001 };
