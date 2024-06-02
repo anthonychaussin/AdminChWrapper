@@ -6,29 +6,60 @@ using wseAdmin;
 
 namespace AdminChWrapper.Api
 {
+    /// <summary>
+    /// The search api.
+    /// </summary>
     public partial class SearchApi
     {
         private static readonly string JSON_PATH = Path.Combine(".", "resources", "organisations.json");
         private static readonly byte[] BRACKETBYTE = Encoding.UTF8.GetBytes("]");
-        public Dictionary<int, organisationType> Organisations { get; set; } = [];
-        public List<int> BadVAT { get; set; } = new List<int>() { 0, 1001001 };
+
+        /// <summary>
+        /// Gets or sets the organizations.
+        /// </summary>
+        public Dictionary<int, organisationType> Organizations { get; set; } = [];
+
+        /// <summary>
+        /// Gets or sets the bad v a t.
+        /// </summary>
+        public List<int> BadVAT { get; set; } = [0, 1001001];
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SearchApi"/> class.
+        /// </summary>
         public SearchApi()
         {
-            Organisations = LoadJson().ToDictionary(o => int.Parse(o.organisation.organisationIdentification.uid.uidOrganisationId), o => o);
-        }
-        public SearchApi(List<organisationType> organisations)
-        {
-            Organisations = organisations.ToDictionary(o => int.Parse(o.organisation.organisationIdentification.uid.uidOrganisationId), o => o);
+            Organizations = LoadJson().ToDictionary(o => int.Parse(o.organisation.organisationIdentification.uid.uidOrganisationId), o => o);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SearchApi"/> class.
+        /// </summary>
+        /// <param name="organisations">The organisations.</param>
+        public SearchApi(List<organisationType> organisations)
+        {
+            Organizations = organisations.ToDictionary(o => int.Parse(o.organisation.organisationIdentification.uid.uidOrganisationId), o => o);
+        }
+
+        /// <summary>
+        /// Searches the.
+        /// </summary>
+        /// <param name="searchRequest">The search request.</param>
+        /// <param name="searchConfiguration">The search configuration.</param>
+        /// <returns>A Task.</returns>
         public static Task<uidEntitySearchResponse> Search(uidEntityPublicSearchRequest searchRequest, searchConfiguration searchConfiguration)
         {
             return new PublicServicesClient().SearchAsync(searchRequest, searchConfiguration);
         }
 
+        /// <summary>
+        /// Vats the search.
+        /// </summary>
+        /// <param name="vatIDE">The vat i d e.</param>
+        /// <returns>A T.</returns>
         public T VatSearch<T>(int vatIDE) where T : IOrganisation
         {
-            if (Organisations.Count > 0 && Organisations.TryGetValue(vatIDE, out var organisationFinded))
+            if (Organizations.Count > 0 && Organizations.TryGetValue(vatIDE, out var organisationFinded))
             {
                 return typeof(T) == typeof(organisationType) ? (T)(object)organisationFinded : (T)(object)new Company(organisationFinded);
             }
@@ -43,8 +74,7 @@ namespace AdminChWrapper.Api
             {
                 isValide = new PublicServicesClient().ValidateUIDAsync("CHE" + vatIDE).Result;
             }
-            catch {}
-            
+            catch { }
 
             if (isValide)
             {
@@ -78,6 +108,11 @@ namespace AdminChWrapper.Api
             }
         }
 
+        /// <summary>
+        /// Vats the search.
+        /// </summary>
+        /// <param name="vatIDE">The vat i d e.</param>
+        /// <returns>A T.</returns>
         public T VatSearch<T>(string vatIDE) where T : IOrganisation
         {
             var organisation = VatSearch<organisationType>(int.Parse(VATParser().Replace(vatIDE.ToLower(), String.Empty)));
@@ -85,12 +120,20 @@ namespace AdminChWrapper.Api
             return typeof(T) == typeof(organisationType) ? (T)(object)organisation : (T)(object)new Company(organisation);
         }
 
+        /// <summary>
+        /// Cleans the cache.
+        /// </summary>
+        /// <returns>A bool.</returns>
         public bool CleanCache()
         {
-            this.Organisations.Clear();
-            return Organisations.Count == 0;
+            this.Organizations.Clear();
+            return Organizations.Count == 0;
         }
 
+        /// <summary>
+        /// Loads the json.
+        /// </summary>
+        /// <returns>A list of organisationTypes.</returns>
         private static List<organisationType> LoadJson()
         {
             using (var r = new StreamReader(JSON_PATH))
@@ -99,9 +142,14 @@ namespace AdminChWrapper.Api
             }
         }
 
+        /// <summary>
+        /// Adds the to organisation.
+        /// </summary>
+        /// <param name="organisationId">The organisation id.</param>
+        /// <param name="organisation">The organisation.</param>
         private void AddToOrganisation(int organisationId, organisationType organisation)
         {
-            if (this.Organisations.TryAdd(organisationId, organisation))
+            if (this.Organizations.TryAdd(organisationId, organisation))
             {
                 using (var fs = File.Open(JSON_PATH, FileMode.Open))
                 {
@@ -114,6 +162,10 @@ namespace AdminChWrapper.Api
             }
         }
 
+        /// <summary>
+        /// VS the a t parser.
+        /// </summary>
+        /// <returns>A Regex.</returns>
         [GeneratedRegex(@"[che\-\. ]")]
         private static partial Regex VATParser();
     }

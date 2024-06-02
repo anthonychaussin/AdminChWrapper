@@ -2,35 +2,41 @@
 
 namespace wseAdmin
 {
-    
-    
     /// <remarks/>
+    /// <summary>
+    /// The security fault.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
     public partial class securityFault : serviceFault
     {
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The service fault.
+    /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(infrastructureFault))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(businessFault))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(securityFault))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(duplicateFault))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
     public partial class serviceFault
     {
-        
         private string operationField;
-        
+
         private string errorField;
-        
+
         private string errorDetailField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the operation.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string operation
         {
             get
@@ -42,9 +48,12 @@ namespace wseAdmin
                 this.operationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the error.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string error
         {
             get
@@ -56,9 +65,12 @@ namespace wseAdmin
                 this.errorField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the error detail.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string errorDetail
         {
             get
@@ -71,34 +83,39 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The duplicate candidate type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class duplicateCandidateType
     {
-        
         private int ratingField;
-        
+
         private uidStructureType uidField;
-        
+
         private string organisationNameField;
-        
+
         private string organisationAdditionalNameField;
-        
+
         private string streetField;
-        
+
         private uint swissZipCodeField;
-        
+
         private string townField;
-        
+
         private uidregStatusEnterpriseDetailType uidregStatusEnterpriseDetailField;
-        
+
         private uidregOrganisationTypeType uidregOrganisationTypeField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the rating.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public int rating
         {
             get
@@ -110,9 +127,12 @@ namespace wseAdmin
                 this.ratingField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the uid.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public uidStructureType uid
         {
             get
@@ -124,9 +144,12 @@ namespace wseAdmin
                 this.uidField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the organisation name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string organisationName
         {
             get
@@ -138,9 +161,12 @@ namespace wseAdmin
                 this.organisationNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=3)]
+        /// <summary>
+        /// Gets or sets the organisation additional name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 3)]
         public string organisationAdditionalName
         {
             get
@@ -152,9 +178,12 @@ namespace wseAdmin
                 this.organisationAdditionalNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=4)]
+        /// <summary>
+        /// Gets or sets the street.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 4)]
         public string street
         {
             get
@@ -166,9 +195,12 @@ namespace wseAdmin
                 this.streetField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        /// <summary>
+        /// Gets or sets the swiss zip code.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
         public uint swissZipCode
         {
             get
@@ -180,9 +212,12 @@ namespace wseAdmin
                 this.swissZipCodeField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=6)]
+        /// <summary>
+        /// Gets or sets the town.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 6)]
         public string town
         {
             get
@@ -194,9 +229,12 @@ namespace wseAdmin
                 this.townField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        /// <summary>
+        /// Gets or sets the uidreg status enterprise detail.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 7)]
         public uidregStatusEnterpriseDetailType uidregStatusEnterpriseDetail
         {
             get
@@ -208,9 +246,12 @@ namespace wseAdmin
                 this.uidregStatusEnterpriseDetailField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        /// <summary>
+        /// Gets or sets the uidreg organisation type.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 8)]
         public uidregOrganisationTypeType uidregOrganisationType
         {
             get
@@ -223,21 +264,26 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid structure type.
+    /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(reportingRegister))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0097/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0097/5")]
     public partial class uidStructureType
     {
-        
         private uidOrganisationIdCategorieType uidOrganisationIdCategorieField;
-        
+
         private string uidOrganisationIdField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the uid organisation id categorie.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public uidOrganisationIdCategorieType uidOrganisationIdCategorie
         {
             get
@@ -249,9 +295,12 @@ namespace wseAdmin
                 this.uidOrganisationIdCategorieField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger", Order=1)]
+        /// <summary>
+        /// Gets or sets the uid organisation id.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger", Order = 1)]
         public string uidOrganisationId
         {
             get
@@ -264,175 +313,189 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid organisation id categorie type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0097/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0097/5")]
     public enum uidOrganisationIdCategorieType
     {
-        
         /// <remarks/>
         CHE,
-        
+
         /// <remarks/>
         ADM,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The reporting register.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0116/4")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0116/4")]
     public partial class reportingRegister : uidStructureType
     {
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uidreg status enterprise detail type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum uidregStatusEnterpriseDetailType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("4")]
         Item4,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("5")]
         Item5,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("6")]
         Item6,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("7")]
         Item7,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uidreg organisation type type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum uidregOrganisationTypeType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("4")]
         Item4,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("5")]
         Item5,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("6")]
         Item6,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("7")]
         Item7,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("8")]
         Item8,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("9")]
         Item9,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("10")]
         Item10,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("11")]
         Item11,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("12")]
         Item12,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("13")]
         Item13,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("14")]
         Item14,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("15")]
         Item15,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("16")]
         Item16,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("17")]
         Item17,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("18")]
         Item18,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("19")]
         Item19,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("99")]
         Item99,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The involved person type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class involvedPersonType
     {
-        
         private string roleField;
-        
+
         private ulong vnField;
-        
+
         private bool vnFieldSpecified;
-        
+
         private string officialNameField;
-        
+
         private string firstNameField;
-        
+
         private datePartiallyKnownType dateOfBirthField;
-        
+
         private sexType sexField;
-        
+
         private bool sexFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the role.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string role
         {
             get
@@ -444,9 +507,12 @@ namespace wseAdmin
                 this.roleField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the vn.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public ulong vn
         {
             get
@@ -458,8 +524,11 @@ namespace wseAdmin
                 this.vnField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether vn specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool vnSpecified
         {
@@ -472,9 +541,12 @@ namespace wseAdmin
                 this.vnFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the official name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string officialName
         {
             get
@@ -486,9 +558,12 @@ namespace wseAdmin
                 this.officialNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=3)]
+        /// <summary>
+        /// Gets or sets the first name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 3)]
         public string firstName
         {
             get
@@ -500,9 +575,12 @@ namespace wseAdmin
                 this.firstNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        /// <summary>
+        /// Gets or sets the date of birth.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
         public datePartiallyKnownType dateOfBirth
         {
             get
@@ -514,9 +592,12 @@ namespace wseAdmin
                 this.dateOfBirthField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        /// <summary>
+        /// Gets or sets the sex.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
         public sexType sex
         {
             get
@@ -528,8 +609,11 @@ namespace wseAdmin
                 this.sexField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether sex specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool sexSpecified
         {
@@ -543,22 +627,27 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The date partially known type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0098/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0098/5")]
     public partial class datePartiallyKnownType
     {
-        
         private object itemField;
-        
+
         private ItemChoiceType itemElementNameField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("year", typeof(string), DataType="gYear", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("yearMonth", typeof(string), DataType="gYearMonth", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("yearMonthDay", typeof(System.DateTime), DataType="date", Order=0)]
+        /// <summary>
+        /// Gets or sets the item.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("year", typeof(string), DataType = "gYear", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("yearMonth", typeof(string), DataType = "gYearMonth", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("yearMonthDay", typeof(System.DateTime), DataType = "date", Order = 0)]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public object Item
         {
@@ -571,9 +660,12 @@ namespace wseAdmin
                 this.itemField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the item element name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemChoiceType ItemElementName
         {
@@ -587,57 +679,66 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The item choice type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0098/5", IncludeInSchema=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0098/5", IncludeInSchema = false)]
     public enum ItemChoiceType
     {
-        
         /// <remarks/>
         year,
-        
+
         /// <remarks/>
         yearMonth,
-        
+
         /// <remarks/>
         yearMonthDay,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The sex type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0044/4")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0044/4")]
     public enum sexType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The group relationship type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class groupRelationshipType
     {
-        
         private string groupNameField;
-        
+
         private organisationMembershipRoleType organisationMembershipRoleField;
-        
+
         private groupRelationshipTypeGroupParticipant[] groupParticipantField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the group name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string groupName
         {
             get
@@ -649,9 +750,12 @@ namespace wseAdmin
                 this.groupNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the organisation membership role.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public organisationMembershipRoleType organisationMembershipRole
         {
             get
@@ -663,9 +767,12 @@ namespace wseAdmin
                 this.organisationMembershipRoleField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("groupParticipant", Order=2)]
+        /// <summary>
+        /// Gets or sets the group participant.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("groupParticipant", Order = 2)]
         public groupRelationshipTypeGroupParticipant[] groupParticipant
         {
             get
@@ -678,35 +785,42 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The organisation membership role type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum organisationMembershipRoleType
     {
-        
         /// <remarks/>
         GroupHead,
-        
+
         /// <remarks/>
         GroupMember,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The group relationship type group participant.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class groupRelationshipTypeGroupParticipant
     {
-        
         private uidStructureType participantField;
-        
+
         private organisationMembershipRoleType participantRoleField;
-        
+
         private bool participantRoleFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the participant.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public uidStructureType participant
         {
             get
@@ -718,9 +832,12 @@ namespace wseAdmin
                 this.participantField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the participant role.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public organisationMembershipRoleType participantRole
         {
             get
@@ -732,8 +849,11 @@ namespace wseAdmin
                 this.participantRoleField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether participant role specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool participantRoleSpecified
         {
@@ -747,24 +867,29 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The lei register information type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class leiRegisterInformationType
     {
-        
         private System.DateTime initialRegistrationDateField;
-        
+
         private System.DateTime expirationDateField;
-        
+
         private bool expirationDateFieldSpecified;
-        
+
         private leiRegisterInformationTypeRegistrationStatus registrationStatusField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=0)]
+        /// <summary>
+        /// Gets or sets the initial registration date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 0)]
         public System.DateTime initialRegistrationDate
         {
             get
@@ -776,9 +901,12 @@ namespace wseAdmin
                 this.initialRegistrationDateField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        /// <summary>
+        /// Gets or sets the expiration date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 1)]
         public System.DateTime expirationDate
         {
             get
@@ -790,8 +918,11 @@ namespace wseAdmin
                 this.expirationDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether expiration date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool expirationDateSpecified
         {
@@ -804,9 +935,12 @@ namespace wseAdmin
                 this.expirationDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the registration status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public leiRegisterInformationTypeRegistrationStatus registrationStatus
         {
             get
@@ -819,60 +953,67 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The lei register information type registration status.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum leiRegisterInformationTypeRegistrationStatus
     {
-        
         /// <remarks/>
         ISSUED,
-        
+
         /// <remarks/>
         DUPLICATE,
-        
+
         /// <remarks/>
         LAPSED,
-        
+
         /// <remarks/>
         MERGED,
-        
+
         /// <remarks/>
         RETIRED,
-        
+
         /// <remarks/>
         ANNULLED,
-        
+
         /// <remarks/>
         CANCELLED,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The vat register information type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class vatRegisterInformationType
     {
-        
         private vatStatusType vatStatusField;
-        
+
         private vatEntryStatusType vatEntryStatusField;
-        
+
         private bool vatEntryStatusFieldSpecified;
-        
+
         private System.DateTime vatEntryDateField;
-        
+
         private bool vatEntryDateFieldSpecified;
-        
+
         private System.DateTime vatLiquidationDateField;
-        
+
         private bool vatLiquidationDateFieldSpecified;
-        
+
         private uidStructureType uidVatField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the vat status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public vatStatusType vatStatus
         {
             get
@@ -884,9 +1025,12 @@ namespace wseAdmin
                 this.vatStatusField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the vat entry status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public vatEntryStatusType vatEntryStatus
         {
             get
@@ -898,8 +1042,11 @@ namespace wseAdmin
                 this.vatEntryStatusField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether vat entry status specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool vatEntryStatusSpecified
         {
@@ -912,9 +1059,12 @@ namespace wseAdmin
                 this.vatEntryStatusFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=2)]
+        /// <summary>
+        /// Gets or sets the vat entry date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 2)]
         public System.DateTime vatEntryDate
         {
             get
@@ -926,8 +1076,11 @@ namespace wseAdmin
                 this.vatEntryDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether vat entry date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool vatEntryDateSpecified
         {
@@ -940,9 +1093,12 @@ namespace wseAdmin
                 this.vatEntryDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
+        /// <summary>
+        /// Gets or sets the vat liquidation date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 3)]
         public System.DateTime vatLiquidationDate
         {
             get
@@ -954,8 +1110,11 @@ namespace wseAdmin
                 this.vatLiquidationDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether vat liquidation date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool vatLiquidationDateSpecified
         {
@@ -968,9 +1127,12 @@ namespace wseAdmin
                 this.vatLiquidationDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        /// <summary>
+        /// Gets or sets the uid vat.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
         public uidStructureType uidVat
         {
             get
@@ -983,70 +1145,79 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The vat status type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum vatStatusType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The vat entry status type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum vatEntryStatusType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The commercial register information type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class commercialRegisterInformationType
     {
-        
         private commercialRegisterStatusType commercialRegisterStatusField;
-        
+
         private commercialRegisterEntryStatusType commercialRegisterEntryStatusField;
-        
+
         private bool commercialRegisterEntryStatusFieldSpecified;
-        
+
         private string commercialRegisterNameTranslationField;
-        
+
         private System.DateTime commercialRegisterEntryDateField;
-        
+
         private bool commercialRegisterEntryDateFieldSpecified;
-        
+
         private System.DateTime commercialRegisterLiquidationDateField;
-        
+
         private bool commercialRegisterLiquidationDateFieldSpecified;
-        
+
         private commercialRegisterEnterpriseTypeType commercialRegisterEnterpriseTypeField;
-        
+
         private bool commercialRegisterEnterpriseTypeFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the commercial register status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public commercialRegisterStatusType commercialRegisterStatus
         {
             get
@@ -1058,9 +1229,12 @@ namespace wseAdmin
                 this.commercialRegisterStatusField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the commercial register entry status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public commercialRegisterEntryStatusType commercialRegisterEntryStatus
         {
             get
@@ -1072,8 +1246,11 @@ namespace wseAdmin
                 this.commercialRegisterEntryStatusField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register entry status specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterEntryStatusSpecified
         {
@@ -1086,9 +1263,12 @@ namespace wseAdmin
                 this.commercialRegisterEntryStatusFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the commercial register name translation.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string commercialRegisterNameTranslation
         {
             get
@@ -1100,9 +1280,12 @@ namespace wseAdmin
                 this.commercialRegisterNameTranslationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
+        /// <summary>
+        /// Gets or sets the commercial register entry date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 3)]
         public System.DateTime commercialRegisterEntryDate
         {
             get
@@ -1114,8 +1297,11 @@ namespace wseAdmin
                 this.commercialRegisterEntryDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register entry date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterEntryDateSpecified
         {
@@ -1128,9 +1314,12 @@ namespace wseAdmin
                 this.commercialRegisterEntryDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
+        /// <summary>
+        /// Gets or sets the commercial register liquidation date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 4)]
         public System.DateTime commercialRegisterLiquidationDate
         {
             get
@@ -1142,8 +1331,11 @@ namespace wseAdmin
                 this.commercialRegisterLiquidationDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register liquidation date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterLiquidationDateSpecified
         {
@@ -1156,9 +1348,12 @@ namespace wseAdmin
                 this.commercialRegisterLiquidationDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        /// <summary>
+        /// Gets or sets the commercial register enterprise type.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
         public commercialRegisterEnterpriseTypeType commercialRegisterEnterpriseType
         {
             get
@@ -1170,8 +1365,11 @@ namespace wseAdmin
                 this.commercialRegisterEnterpriseTypeField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register enterprise type specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterEnterpriseTypeSpecified
         {
@@ -1185,77 +1383,88 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The commercial register status type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum commercialRegisterStatusType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The commercial register entry status type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum commercialRegisterEntryStatusType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The commercial register enterprise type type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum commercialRegisterEnterpriseTypeType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid reg source type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class uidRegSourceType
     {
-        
         private uidStructureType uidField;
-        
+
         private uidRegSourceTypeRelationType relationTypeField;
-        
+
         private System.DateTime registrationDateField;
-        
+
         private uidRegSourceTypeRegistrationStatus registrationStatusField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the uid.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public uidStructureType uid
         {
             get
@@ -1267,9 +1476,12 @@ namespace wseAdmin
                 this.uidField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the relation type.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public uidRegSourceTypeRelationType relationType
         {
             get
@@ -1281,9 +1493,12 @@ namespace wseAdmin
                 this.relationTypeField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=2)]
+        /// <summary>
+        /// Gets or sets the registration date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 2)]
         public System.DateTime registrationDate
         {
             get
@@ -1295,9 +1510,12 @@ namespace wseAdmin
                 this.registrationDateField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        /// <summary>
+        /// Gets or sets the registration status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
         public uidRegSourceTypeRegistrationStatus registrationStatus
         {
             get
@@ -1310,71 +1528,80 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid reg source type relation type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum uidRegSourceTypeRelationType
     {
-        
         /// <remarks/>
         Responsible,
-        
+
         /// <remarks/>
         Registered,
-        
+
         /// <remarks/>
         Subscribed,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid reg source type registration status.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum uidRegSourceTypeRegistrationStatus
     {
-        
         /// <remarks/>
         Active,
-        
+
         /// <remarks/>
         WaitingForSuccessor,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uidreg information type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class uidregInformationType
     {
-        
         private uidregStatusEnterpriseDetailType uidregStatusEnterpriseDetailField;
-        
+
         private bool uidregStatusEnterpriseDetailFieldSpecified;
-        
+
         private uidregPublicStatusType uidregPublicStatusField;
-        
+
         private bool uidregPublicStatusFieldSpecified;
-        
+
         private uidregOrganisationTypeType uidregOrganisationTypeField;
-        
+
         private bool uidregOrganisationTypeFieldSpecified;
-        
+
         private uidregLiquidationReasonType uidregLiquidationReasonField;
-        
+
         private bool uidregLiquidationReasonFieldSpecified;
-        
+
         private uidRegSourceType[] uidregSourceField;
-        
+
         private uidStructureType uidReplacementField;
-        
+
         private bool uidregUidServiceField;
-        
+
         private bool uidregUidServiceFieldSpecified;
-        
+
         private string uidregTranslationField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the uidreg status enterprise detail.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public uidregStatusEnterpriseDetailType uidregStatusEnterpriseDetail
         {
             get
@@ -1386,8 +1613,11 @@ namespace wseAdmin
                 this.uidregStatusEnterpriseDetailField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg status enterprise detail specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool uidregStatusEnterpriseDetailSpecified
         {
@@ -1400,9 +1630,12 @@ namespace wseAdmin
                 this.uidregStatusEnterpriseDetailFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the uidreg public status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public uidregPublicStatusType uidregPublicStatus
         {
             get
@@ -1414,8 +1647,11 @@ namespace wseAdmin
                 this.uidregPublicStatusField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg public status specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool uidregPublicStatusSpecified
         {
@@ -1428,9 +1664,12 @@ namespace wseAdmin
                 this.uidregPublicStatusFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the uidreg organisation type.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public uidregOrganisationTypeType uidregOrganisationType
         {
             get
@@ -1442,8 +1681,11 @@ namespace wseAdmin
                 this.uidregOrganisationTypeField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg organisation type specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool uidregOrganisationTypeSpecified
         {
@@ -1456,9 +1698,12 @@ namespace wseAdmin
                 this.uidregOrganisationTypeFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        /// <summary>
+        /// Gets or sets the uidreg liquidation reason.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
         public uidregLiquidationReasonType uidregLiquidationReason
         {
             get
@@ -1470,8 +1715,11 @@ namespace wseAdmin
                 this.uidregLiquidationReasonField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg liquidation reason specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool uidregLiquidationReasonSpecified
         {
@@ -1484,9 +1732,12 @@ namespace wseAdmin
                 this.uidregLiquidationReasonFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("uidregSource", Order=4)]
+        /// <summary>
+        /// Gets or sets the uidreg source.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("uidregSource", Order = 4)]
         public uidRegSourceType[] uidregSource
         {
             get
@@ -1498,9 +1749,12 @@ namespace wseAdmin
                 this.uidregSourceField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        /// <summary>
+        /// Gets or sets the uid replacement.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
         public uidStructureType uidReplacement
         {
             get
@@ -1512,9 +1766,12 @@ namespace wseAdmin
                 this.uidReplacementField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg uid service.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 6)]
         public bool uidregUidService
         {
             get
@@ -1526,8 +1783,11 @@ namespace wseAdmin
                 this.uidregUidServiceField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg uid service specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool uidregUidServiceSpecified
         {
@@ -1540,9 +1800,12 @@ namespace wseAdmin
                 this.uidregUidServiceFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=7)]
+        /// <summary>
+        /// Gets or sets the uidreg translation.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 7)]
         public string uidregTranslation
         {
             get
@@ -1555,81 +1818,90 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uidreg public status type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum uidregPublicStatusType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("0")]
         Item0,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uidreg liquidation reason type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public enum uidregLiquidationReasonType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("4")]
         Item4,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("5")]
         Item5,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("6")]
         Item6,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("7")]
         Item7,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("8")]
         Item8,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("9")]
         Item9,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The internet type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public partial class internetType
     {
-        
         private object itemField;
-        
+
         private string internetAddressField;
-        
+
         private dateRangeType validityField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("internetCategory", typeof(internetCategoryType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("otherInternetCategory", typeof(string), DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the item.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("internetCategory", typeof(internetCategoryType), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("otherInternetCategory", typeof(string), DataType = "token", Order = 0)]
         public object Item
         {
             get
@@ -1641,9 +1913,12 @@ namespace wseAdmin
                 this.itemField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the internet address.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string internetAddress
         {
             get
@@ -1655,9 +1930,12 @@ namespace wseAdmin
                 this.internetAddressField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the validity.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public dateRangeType validity
         {
             get
@@ -1670,39 +1948,46 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The internet category type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public enum internetCategoryType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The date range type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public partial class dateRangeType
     {
-        
         private System.DateTime dateFromField;
-        
+
         private bool dateFromFieldSpecified;
-        
+
         private System.DateTime dateToField;
-        
+
         private bool dateToFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=0)]
+        /// <summary>
+        /// Gets or sets the date from.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 0)]
         public System.DateTime dateFrom
         {
             get
@@ -1714,8 +1999,11 @@ namespace wseAdmin
                 this.dateFromField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether date from specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool dateFromSpecified
         {
@@ -1728,9 +2016,12 @@ namespace wseAdmin
                 this.dateFromFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        /// <summary>
+        /// Gets or sets the date to.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 1)]
         public System.DateTime dateTo
         {
             get
@@ -1742,8 +2033,11 @@ namespace wseAdmin
                 this.dateToField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether date to specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool dateToSpecified
         {
@@ -1757,23 +2051,28 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The phone type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public partial class phoneType
     {
-        
         private object itemField;
-        
+
         private string phoneNumberField;
-        
+
         private dateRangeType validityField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("otherPhoneCategory", typeof(string), DataType="token", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("phoneCategory", typeof(phoneCategoryType), Order=0)]
+        /// <summary>
+        /// Gets or sets the item.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("otherPhoneCategory", typeof(string), DataType = "token", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("phoneCategory", typeof(phoneCategoryType), Order = 0)]
         public object Item
         {
             get
@@ -1785,9 +2084,12 @@ namespace wseAdmin
                 this.itemField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the phone number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public string phoneNumber
         {
             get
@@ -1799,9 +2101,12 @@ namespace wseAdmin
                 this.phoneNumberField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the validity.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public dateRangeType validity
         {
             get
@@ -1814,70 +2119,77 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The phone category type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public enum phoneCategoryType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("4")]
         Item4,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("5")]
         Item5,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("6")]
         Item6,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("7")]
         Item7,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("8")]
         Item8,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("9")]
         Item9,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("10")]
         Item10,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The email type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public partial class emailType
     {
-        
         private object itemField;
-        
+
         private string emailAddressField;
-        
+
         private dateRangeType validityField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("emailCategory", typeof(emailCategoryType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("otherEmailCategory", typeof(string), DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the item.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("emailCategory", typeof(emailCategoryType), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("otherEmailCategory", typeof(string), DataType = "token", Order = 0)]
         public object Item
         {
             get
@@ -1889,9 +2201,12 @@ namespace wseAdmin
                 this.itemField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the email address.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public string emailAddress
         {
             get
@@ -1903,9 +2218,12 @@ namespace wseAdmin
                 this.emailAddressField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the validity.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public dateRangeType validity
         {
             get
@@ -1918,37 +2236,44 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The email category type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public enum emailCategoryType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The country type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0010/7")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0010/7")]
     public partial class countryType
     {
-        
         private string countryIdField;
-        
+
         private string countryIdISO2Field;
-        
+
         private string countryNameShortField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=0)]
+        /// <summary>
+        /// Gets or sets the country id.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "integer", Order = 0)]
         public string countryId
         {
             get
@@ -1960,9 +2285,12 @@ namespace wseAdmin
                 this.countryIdField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the country id i s o2.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string countryIdISO2
         {
             get
@@ -1974,9 +2302,12 @@ namespace wseAdmin
                 this.countryIdISO2Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the country name short.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string countryNameShort
         {
             get
@@ -1989,42 +2320,47 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The address information type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0010/7")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0010/7")]
     public partial class addressInformationType
     {
-        
         private string addressLine1Field;
-        
+
         private string addressLine2Field;
-        
+
         private string streetField;
-        
+
         private string houseNumberField;
-        
+
         private string dwellingNumberField;
-        
+
         private uint postOfficeBoxNumberField;
-        
+
         private bool postOfficeBoxNumberFieldSpecified;
-        
+
         private string postOfficeBoxTextField;
-        
+
         private string localityField;
-        
+
         private string townField;
-        
+
         private object[] itemsField;
-        
+
         private ItemsChoiceType1[] itemsElementNameField;
-        
+
         private countryType countryField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the address line1.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string addressLine1
         {
             get
@@ -2036,9 +2372,12 @@ namespace wseAdmin
                 this.addressLine1Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the address line2.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string addressLine2
         {
             get
@@ -2050,9 +2389,12 @@ namespace wseAdmin
                 this.addressLine2Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the street.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string street
         {
             get
@@ -2064,9 +2406,12 @@ namespace wseAdmin
                 this.streetField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=3)]
+        /// <summary>
+        /// Gets or sets the house number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 3)]
         public string houseNumber
         {
             get
@@ -2078,9 +2423,12 @@ namespace wseAdmin
                 this.houseNumberField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=4)]
+        /// <summary>
+        /// Gets or sets the dwelling number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 4)]
         public string dwellingNumber
         {
             get
@@ -2092,9 +2440,12 @@ namespace wseAdmin
                 this.dwellingNumberField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        /// <summary>
+        /// Gets or sets the post office box number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
         public uint postOfficeBoxNumber
         {
             get
@@ -2106,8 +2457,11 @@ namespace wseAdmin
                 this.postOfficeBoxNumberField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether post office box number specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool postOfficeBoxNumberSpecified
         {
@@ -2120,9 +2474,12 @@ namespace wseAdmin
                 this.postOfficeBoxNumberFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=6)]
+        /// <summary>
+        /// Gets or sets the post office box text.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 6)]
         public string postOfficeBoxText
         {
             get
@@ -2134,9 +2491,12 @@ namespace wseAdmin
                 this.postOfficeBoxTextField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=7)]
+        /// <summary>
+        /// Gets or sets the locality.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 7)]
         public string locality
         {
             get
@@ -2148,9 +2508,12 @@ namespace wseAdmin
                 this.localityField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=8)]
+        /// <summary>
+        /// Gets or sets the town.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 8)]
         public string town
         {
             get
@@ -2162,12 +2525,15 @@ namespace wseAdmin
                 this.townField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("foreignZipCode", typeof(string), DataType="token", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute("swissZipCode", typeof(uint), Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute("swissZipCodeAddOn", typeof(string), Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute("swissZipCodeId", typeof(int), Order=9)]
+        /// <summary>
+        /// Gets or sets the items.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("foreignZipCode", typeof(string), DataType = "token", Order = 9)]
+        [System.Xml.Serialization.XmlElementAttribute("swissZipCode", typeof(uint), Order = 9)]
+        [System.Xml.Serialization.XmlElementAttribute("swissZipCodeAddOn", typeof(string), Order = 9)]
+        [System.Xml.Serialization.XmlElementAttribute("swissZipCodeId", typeof(int), Order = 9)]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items
         {
@@ -2180,9 +2546,12 @@ namespace wseAdmin
                 this.itemsField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName", Order=10)]
+        /// <summary>
+        /// Gets or sets the items element name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName", Order = 10)]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemsChoiceType1[] ItemsElementName
         {
@@ -2195,9 +2564,12 @@ namespace wseAdmin
                 this.itemsElementNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        /// <summary>
+        /// Gets or sets the country.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 11)]
         public countryType country
         {
             get
@@ -2210,45 +2582,52 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The items choice type1.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0010/7", IncludeInSchema=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0010/7", IncludeInSchema = false)]
     public enum ItemsChoiceType1
     {
-        
         /// <remarks/>
         foreignZipCode,
-        
+
         /// <remarks/>
         swissZipCode,
-        
+
         /// <remarks/>
         swissZipCodeAddOn,
-        
+
         /// <remarks/>
         swissZipCodeId,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The person mail address info type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0010/7")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0010/7")]
     public partial class personMailAddressInfoType
     {
-        
         private mrMrsType mrMrsField;
-        
+
         private bool mrMrsFieldSpecified;
-        
+
         private string titleField;
-        
+
         private string firstNameField;
-        
+
         private string lastNameField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the mr mrs.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public mrMrsType mrMrs
         {
             get
@@ -2260,8 +2639,11 @@ namespace wseAdmin
                 this.mrMrsField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether mr mrs specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool mrMrsSpecified
         {
@@ -2274,9 +2656,12 @@ namespace wseAdmin
                 this.mrMrsFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the title.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string title
         {
             get
@@ -2288,9 +2673,12 @@ namespace wseAdmin
                 this.titleField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the first name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string firstName
         {
             get
@@ -2302,9 +2690,12 @@ namespace wseAdmin
                 this.firstNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=3)]
+        /// <summary>
+        /// Gets or sets the last name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 3)]
         public string lastName
         {
             get
@@ -2317,51 +2708,58 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The mr mrs type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0010/7")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0010/7")]
     public enum mrMrsType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The organisation mail address info type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0010/7")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0010/7")]
     public partial class organisationMailAddressInfoType
     {
-        
         private string organisationNameField;
-        
+
         private string organisationNameAddOn1Field;
-        
+
         private string organisationNameAddOn2Field;
-        
+
         private mrMrsType mrMrsField;
-        
+
         private bool mrMrsFieldSpecified;
-        
+
         private string titleField;
-        
+
         private string firstNameField;
-        
+
         private string lastNameField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the organisation name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string organisationName
         {
             get
@@ -2373,9 +2771,12 @@ namespace wseAdmin
                 this.organisationNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the organisation name add on1.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string organisationNameAddOn1
         {
             get
@@ -2387,9 +2788,12 @@ namespace wseAdmin
                 this.organisationNameAddOn1Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the organisation name add on2.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string organisationNameAddOn2
         {
             get
@@ -2401,9 +2805,12 @@ namespace wseAdmin
                 this.organisationNameAddOn2Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        /// <summary>
+        /// Gets or sets the mr mrs.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
         public mrMrsType mrMrs
         {
             get
@@ -2415,8 +2822,11 @@ namespace wseAdmin
                 this.mrMrsField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether mr mrs specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool mrMrsSpecified
         {
@@ -2429,9 +2839,12 @@ namespace wseAdmin
                 this.mrMrsFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=4)]
+        /// <summary>
+        /// Gets or sets the title.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 4)]
         public string title
         {
             get
@@ -2443,9 +2856,12 @@ namespace wseAdmin
                 this.titleField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=5)]
+        /// <summary>
+        /// Gets or sets the first name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 5)]
         public string firstName
         {
             get
@@ -2457,9 +2873,12 @@ namespace wseAdmin
                 this.firstNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=6)]
+        /// <summary>
+        /// Gets or sets the last name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 6)]
         public string lastName
         {
             get
@@ -2472,21 +2891,26 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The mail address type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0010/7")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0010/7")]
     public partial class mailAddressType
     {
-        
         private object itemField;
-        
+
         private addressInformationType addressInformationField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("organisation", typeof(organisationMailAddressInfoType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("person", typeof(personMailAddressInfoType), Order=0)]
+        /// <summary>
+        /// Gets or sets the item.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("organisation", typeof(organisationMailAddressInfoType), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("person", typeof(personMailAddressInfoType), Order = 0)]
         public object Item
         {
             get
@@ -2498,9 +2922,12 @@ namespace wseAdmin
                 this.itemField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the address information.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public addressInformationType addressInformation
         {
             get
@@ -2513,23 +2940,28 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The address type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public partial class addressType
     {
-        
         private object itemField;
-        
+
         private mailAddressType postalAddressField;
-        
+
         private dateRangeType validityField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("addressCategory", typeof(addressCategoryType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("otherAddressCategory", typeof(string), DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the item.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("addressCategory", typeof(addressCategoryType), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("otherAddressCategory", typeof(string), DataType = "token", Order = 0)]
         public object Item
         {
             get
@@ -2541,9 +2973,12 @@ namespace wseAdmin
                 this.itemField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the postal address.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public mailAddressType postalAddress
         {
             get
@@ -2555,9 +2990,12 @@ namespace wseAdmin
                 this.postalAddressField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the validity.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public dateRangeType validity
         {
             get
@@ -2570,35 +3008,42 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The address category type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public enum addressCategoryType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The named person id type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0044/4")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0044/4")]
     public partial class namedPersonIdType
     {
-        
         private string personIdCategoryField;
-        
+
         private string personIdField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the person id category.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string personIdCategory
         {
             get
@@ -2610,9 +3055,12 @@ namespace wseAdmin
                 this.personIdCategoryField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the person id.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string personId
         {
             get
@@ -2625,26 +3073,31 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The contact type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0046/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0046/5")]
     public partial class contactType
     {
-        
         private namedPersonIdType localIDField;
-        
+
         private addressType[] addressField;
-        
+
         private emailType[] emailField;
-        
+
         private phoneType[] phoneField;
-        
+
         private internetType[] internetField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the local i d.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public namedPersonIdType localID
         {
             get
@@ -2656,9 +3109,12 @@ namespace wseAdmin
                 this.localIDField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("address", Order=1)]
+        /// <summary>
+        /// Gets or sets the address.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("address", Order = 1)]
         public addressType[] address
         {
             get
@@ -2670,9 +3126,12 @@ namespace wseAdmin
                 this.addressField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("email", Order=2)]
+        /// <summary>
+        /// Gets or sets the email.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("email", Order = 2)]
         public emailType[] email
         {
             get
@@ -2684,9 +3143,12 @@ namespace wseAdmin
                 this.emailField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("phone", Order=3)]
+        /// <summary>
+        /// Gets or sets the phone.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("phone", Order = 3)]
         public phoneType[] phone
         {
             get
@@ -2698,9 +3160,12 @@ namespace wseAdmin
                 this.phoneField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("internet", Order=4)]
+        /// <summary>
+        /// Gets or sets the internet.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("internet", Order = 4)]
         public internetType[] internet
         {
             get
@@ -2713,48 +3178,53 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The organisation address type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0098/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0098/5")]
     public partial class organisationAddressType
     {
-        
         private string addressCategoryField;
-        
+
         private string addressLine1Field;
-        
+
         private string addressLine2Field;
-        
+
         private string streetField;
-        
+
         private string houseNumberField;
-        
+
         private string dwellingNumberField;
-        
+
         private uint postOfficeBoxNumberField;
-        
+
         private bool postOfficeBoxNumberFieldSpecified;
-        
+
         private string townField;
-        
+
         private object[] itemsField;
-        
+
         private ItemsChoiceType[] itemsElementNameField;
-        
+
         private string countryIdISO2Field;
-        
+
         private bool deliverableYesNoField;
-        
+
         private bool deliverableYesNoFieldSpecified;
-        
+
         private System.DateTime dateOfLastCheckField;
-        
+
         private bool dateOfLastCheckFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the address category.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string addressCategory
         {
             get
@@ -2766,9 +3236,12 @@ namespace wseAdmin
                 this.addressCategoryField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the address line1.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string addressLine1
         {
             get
@@ -2780,9 +3253,12 @@ namespace wseAdmin
                 this.addressLine1Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the address line2.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string addressLine2
         {
             get
@@ -2794,9 +3270,12 @@ namespace wseAdmin
                 this.addressLine2Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=3)]
+        /// <summary>
+        /// Gets or sets the street.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 3)]
         public string street
         {
             get
@@ -2808,9 +3287,12 @@ namespace wseAdmin
                 this.streetField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=4)]
+        /// <summary>
+        /// Gets or sets the house number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 4)]
         public string houseNumber
         {
             get
@@ -2822,9 +3304,12 @@ namespace wseAdmin
                 this.houseNumberField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=5)]
+        /// <summary>
+        /// Gets or sets the dwelling number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 5)]
         public string dwellingNumber
         {
             get
@@ -2836,9 +3321,12 @@ namespace wseAdmin
                 this.dwellingNumberField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        /// <summary>
+        /// Gets or sets the post office box number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 6)]
         public uint postOfficeBoxNumber
         {
             get
@@ -2850,8 +3338,11 @@ namespace wseAdmin
                 this.postOfficeBoxNumberField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether post office box number specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool postOfficeBoxNumberSpecified
         {
@@ -2864,9 +3355,12 @@ namespace wseAdmin
                 this.postOfficeBoxNumberFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=7)]
+        /// <summary>
+        /// Gets or sets the town.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 7)]
         public string town
         {
             get
@@ -2878,14 +3372,17 @@ namespace wseAdmin
                 this.townField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EGID", typeof(uint), Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute("cantonAbbreviation", typeof(cantonAbbreviationType), Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute("foreignZipCode", typeof(string), DataType="token", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute("municipalityId", typeof(int), Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute("swissZipCode", typeof(uint), Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute("swissZipCodeAddOn", typeof(string), Order=8)]
+        /// <summary>
+        /// Gets or sets the items.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("EGID", typeof(uint), Order = 8)]
+        [System.Xml.Serialization.XmlElementAttribute("cantonAbbreviation", typeof(cantonAbbreviationType), Order = 8)]
+        [System.Xml.Serialization.XmlElementAttribute("foreignZipCode", typeof(string), DataType = "token", Order = 8)]
+        [System.Xml.Serialization.XmlElementAttribute("municipalityId", typeof(int), Order = 8)]
+        [System.Xml.Serialization.XmlElementAttribute("swissZipCode", typeof(uint), Order = 8)]
+        [System.Xml.Serialization.XmlElementAttribute("swissZipCodeAddOn", typeof(string), Order = 8)]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items
         {
@@ -2898,9 +3395,12 @@ namespace wseAdmin
                 this.itemsField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName", Order=9)]
+        /// <summary>
+        /// Gets or sets the items element name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName", Order = 9)]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemsChoiceType[] ItemsElementName
         {
@@ -2913,9 +3413,12 @@ namespace wseAdmin
                 this.itemsElementNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=10)]
+        /// <summary>
+        /// Gets or sets the country id i s o2.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 10)]
         public string countryIdISO2
         {
             get
@@ -2927,9 +3430,12 @@ namespace wseAdmin
                 this.countryIdISO2Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        /// <summary>
+        /// Gets or sets a value indicating whether deliverable yes no.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 11)]
         public bool deliverableYesNo
         {
             get
@@ -2941,8 +3447,11 @@ namespace wseAdmin
                 this.deliverableYesNoField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether deliverable yes no specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool deliverableYesNoSpecified
         {
@@ -2955,9 +3464,12 @@ namespace wseAdmin
                 this.deliverableYesNoFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=12)]
+        /// <summary>
+        /// Gets or sets the date of last check.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 12)]
         public System.DateTime dateOfLastCheck
         {
             get
@@ -2969,8 +3481,11 @@ namespace wseAdmin
                 this.dateOfLastCheckField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether date of last check specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool dateOfLastCheckSpecified
         {
@@ -2984,134 +3499,143 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The canton abbreviation type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0007/6")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0007/6")]
     public enum cantonAbbreviationType
     {
-        
         /// <remarks/>
         ZH,
-        
+
         /// <remarks/>
         BE,
-        
+
         /// <remarks/>
         LU,
-        
+
         /// <remarks/>
         UR,
-        
+
         /// <remarks/>
         SZ,
-        
+
         /// <remarks/>
         OW,
-        
+
         /// <remarks/>
         NW,
-        
+
         /// <remarks/>
         GL,
-        
+
         /// <remarks/>
         ZG,
-        
+
         /// <remarks/>
         FR,
-        
+
         /// <remarks/>
         SO,
-        
+
         /// <remarks/>
         BS,
-        
+
         /// <remarks/>
         BL,
-        
+
         /// <remarks/>
         SH,
-        
+
         /// <remarks/>
         AR,
-        
+
         /// <remarks/>
         AI,
-        
+
         /// <remarks/>
         SG,
-        
+
         /// <remarks/>
         GR,
-        
+
         /// <remarks/>
         AG,
-        
+
         /// <remarks/>
         TG,
-        
+
         /// <remarks/>
         TI,
-        
+
         /// <remarks/>
         VD,
-        
+
         /// <remarks/>
         VS,
-        
+
         /// <remarks/>
         NE,
-        
+
         /// <remarks/>
         GE,
-        
+
         /// <remarks/>
         JU,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The items choice type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0098/5", IncludeInSchema=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0098/5", IncludeInSchema = false)]
     public enum ItemsChoiceType
     {
-        
         /// <remarks/>
         EGID,
-        
+
         /// <remarks/>
         cantonAbbreviation,
-        
+
         /// <remarks/>
         foreignZipCode,
-        
+
         /// <remarks/>
         municipalityId,
-        
+
         /// <remarks/>
         swissZipCode,
-        
+
         /// <remarks/>
         swissZipCodeAddOn,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The liquidation type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0098/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0098/5")]
     public partial class liquidationType
     {
-        
         private datePartiallyKnownType liquidationDateField;
-        
+
         private datePartiallyKnownType liquidationStartDateField;
-        
+
         private liquidationReasonType liquidationReasonField;
-        
+
         private bool liquidationReasonFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the liquidation date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public datePartiallyKnownType liquidationDate
         {
             get
@@ -3123,9 +3647,12 @@ namespace wseAdmin
                 this.liquidationDateField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the liquidation start date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public datePartiallyKnownType liquidationStartDate
         {
             get
@@ -3137,9 +3664,12 @@ namespace wseAdmin
                 this.liquidationStartDateField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the liquidation reason.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public liquidationReasonType liquidationReason
         {
             get
@@ -3151,8 +3681,11 @@ namespace wseAdmin
                 this.liquidationReasonField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether liquidation reason specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool liquidationReasonSpecified
         {
@@ -3166,41 +3699,48 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The liquidation reason type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0098/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0098/5")]
     public enum liquidationReasonType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The foundation type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0098/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0098/5")]
     public partial class foundationType
     {
-        
         private datePartiallyKnownType foundationDateField;
-        
+
         private foundationReasonType foundationReasonField;
-        
+
         private bool foundationReasonFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the foundation date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public datePartiallyKnownType foundationDate
         {
             get
@@ -3212,9 +3752,12 @@ namespace wseAdmin
                 this.foundationDateField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the foundation reason.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public foundationReasonType foundationReason
         {
             get
@@ -3226,8 +3769,11 @@ namespace wseAdmin
                 this.foundationReasonField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether foundation reason specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool foundationReasonSpecified
         {
@@ -3241,39 +3787,46 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The foundation reason type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0098/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0098/5")]
     public enum foundationReasonType
     {
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
         Item1,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
         Item2,
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("3")]
         Item3,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The named organisation id type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0097/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0097/5")]
     public partial class namedOrganisationIdType
     {
-        
         private string organisationIdCategoryField;
-        
+
         private string organisationIdField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the organisation id category.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string organisationIdCategory
         {
             get
@@ -3285,9 +3838,12 @@ namespace wseAdmin
                 this.organisationIdCategoryField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the organisation id.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string organisationId
         {
             get
@@ -3300,30 +3856,35 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The organisation identification type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0097/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0097/5")]
     public partial class organisationIdentificationType
     {
-        
         private uidStructureType uidField;
-        
+
         private namedOrganisationIdType localOrganisationIdField;
-        
+
         private namedOrganisationIdType[] otherOrganisationIdField;
-        
+
         private string organisationNameField;
-        
+
         private string organisationLegalNameField;
-        
+
         private string organisationAdditionalNameField;
-        
+
         private string legalFormField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the uid.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public uidStructureType uid
         {
             get
@@ -3335,9 +3896,12 @@ namespace wseAdmin
                 this.uidField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the local organisation id.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public namedOrganisationIdType localOrganisationId
         {
             get
@@ -3349,9 +3913,12 @@ namespace wseAdmin
                 this.localOrganisationIdField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("OtherOrganisationId", Order=2)]
+        /// <summary>
+        /// Gets or sets the other organisation id.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("OtherOrganisationId", Order = 2)]
         public namedOrganisationIdType[] OtherOrganisationId
         {
             get
@@ -3363,9 +3930,12 @@ namespace wseAdmin
                 this.otherOrganisationIdField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=3)]
+        /// <summary>
+        /// Gets or sets the organisation name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 3)]
         public string organisationName
         {
             get
@@ -3377,9 +3947,12 @@ namespace wseAdmin
                 this.organisationNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=4)]
+        /// <summary>
+        /// Gets or sets the organisation legal name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 4)]
         public string organisationLegalName
         {
             get
@@ -3391,9 +3964,12 @@ namespace wseAdmin
                 this.organisationLegalNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=5)]
+        /// <summary>
+        /// Gets or sets the organisation additional name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 5)]
         public string organisationAdditionalName
         {
             get
@@ -3405,9 +3981,12 @@ namespace wseAdmin
                 this.organisationAdditionalNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        /// <summary>
+        /// Gets or sets the legal form.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 6)]
         public string legalForm
         {
             get
@@ -3420,32 +3999,37 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The organisation type1.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="organisationType", Namespace="http://www.ech.ch/xmlns/eCH-0098/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "organisationType", Namespace = "http://www.ech.ch/xmlns/eCH-0098/5")]
     public partial class organisationType1
     {
-        
         private organisationIdentificationType organisationIdentificationField;
-        
+
         private string uidBrancheTextField;
-        
+
         private string nOGACodeField;
-        
+
         private foundationType foundationField;
-        
+
         private liquidationType liquidationField;
-        
+
         private organisationAddressType[] addressField;
-        
+
         private contactType contactField;
-        
+
         private string languageOfCorrespondanceField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the organisation identification.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public organisationIdentificationType organisationIdentification
         {
             get
@@ -3457,9 +4041,12 @@ namespace wseAdmin
                 this.organisationIdentificationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the uid branche text.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string uidBrancheText
         {
             get
@@ -3471,9 +4058,12 @@ namespace wseAdmin
                 this.uidBrancheTextField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the n o g a code.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string NOGACode
         {
             get
@@ -3485,9 +4075,12 @@ namespace wseAdmin
                 this.nOGACodeField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        /// <summary>
+        /// Gets or sets the foundation.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
         public foundationType foundation
         {
             get
@@ -3499,9 +4092,12 @@ namespace wseAdmin
                 this.foundationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        /// <summary>
+        /// Gets or sets the liquidation.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
         public liquidationType liquidation
         {
             get
@@ -3513,9 +4109,12 @@ namespace wseAdmin
                 this.liquidationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("address", Order=5)]
+        /// <summary>
+        /// Gets or sets the address.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("address", Order = 5)]
         public organisationAddressType[] address
         {
             get
@@ -3527,9 +4126,12 @@ namespace wseAdmin
                 this.addressField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        /// <summary>
+        /// Gets or sets the contact.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 6)]
         public contactType contact
         {
             get
@@ -3541,9 +4143,12 @@ namespace wseAdmin
                 this.contactField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=7)]
+        /// <summary>
+        /// Gets or sets the language of correspondance.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 7)]
         public string languageOfCorrespondance
         {
             get
@@ -3556,30 +4161,35 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The organisation type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.ech.ch/xmlns/eCH-0108/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.ech.ch/xmlns/eCH-0108/5")]
     public partial class organisationType : IOrganisation
     {
-        
         private organisationType1 organisationField;
-        
+
         private uidregInformationType uidregInformationField;
-        
+
         private commercialRegisterInformationType commercialRegisterInformationField;
-        
+
         private vatRegisterInformationType vatRegisterInformationField;
-        
+
         private leiRegisterInformationType leiRegisterInformationField;
-        
+
         private groupRelationshipType[] groupRelationshipField;
-        
+
         private involvedPersonType[] involvedPersonField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the organisation.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public organisationType1 organisation
         {
             get
@@ -3591,9 +4201,12 @@ namespace wseAdmin
                 this.organisationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the uidreg information.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public uidregInformationType uidregInformation
         {
             get
@@ -3605,9 +4218,12 @@ namespace wseAdmin
                 this.uidregInformationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the commercial register information.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public commercialRegisterInformationType commercialRegisterInformation
         {
             get
@@ -3619,9 +4235,12 @@ namespace wseAdmin
                 this.commercialRegisterInformationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        /// <summary>
+        /// Gets or sets the vat register information.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
         public vatRegisterInformationType vatRegisterInformation
         {
             get
@@ -3633,9 +4252,12 @@ namespace wseAdmin
                 this.vatRegisterInformationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        /// <summary>
+        /// Gets or sets the lei register information.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
         public leiRegisterInformationType leiRegisterInformation
         {
             get
@@ -3647,9 +4269,12 @@ namespace wseAdmin
                 this.leiRegisterInformationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("groupRelationship", Order=5)]
+        /// <summary>
+        /// Gets or sets the group relationship.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("groupRelationship", Order = 5)]
         public groupRelationshipType[] groupRelationship
         {
             get
@@ -3661,9 +4286,12 @@ namespace wseAdmin
                 this.groupRelationshipField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("involvedPerson", Order=6)]
+        /// <summary>
+        /// Gets or sets the involved person.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("involvedPerson", Order = 6)]
         public involvedPersonType[] involvedPerson
         {
             get
@@ -3676,36 +4304,47 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The infrastructure fault.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
     public partial class infrastructureFault : serviceFault
     {
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The business fault.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
     public partial class businessFault : serviceFault
     {
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The duplicate fault.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class duplicateFault : serviceFault
     {
-        
         private duplicateCandidateType[] candidatesField;
-        
+
         private string duplicateOverrideCodeField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("candidates", Order=0)]
+        /// <summary>
+        /// Gets or sets the candidates.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("candidates", Order = 0)]
         public duplicateCandidateType[] candidates
         {
             get
@@ -3717,9 +4356,12 @@ namespace wseAdmin
                 this.candidatesField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the duplicate override code.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string duplicateOverrideCode
         {
             get
@@ -3732,78 +4374,107 @@ namespace wseAdmin
             }
         }
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse", ConfigurationName="wseAdmin.IPublicServices")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse", ConfigurationName = "wseAdmin.IPublicServices")]
     public interface IPublicServices
     {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSample", ReplyAction="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSampleRespon" +
+        /// <summary>
+        /// Gets the organisation sample async.
+        /// </summary>
+        /// <returns>A System.Threading.Tasks.Task&lt;wseAdmin.organisationType&gt;.</returns>
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSample", ReplyAction = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSampleRespon" +
             "se")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSamplesecuri" +
-            "tyFaultFault", Name="securityFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSamplebusine" +
-            "ssFaultFault", Name="businessFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSampleinfras" +
-            "tructureFaultFault", Name="infrastructureFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSamplesecuri" +
+            "tyFaultFault", Name = "securityFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSamplebusine" +
+            "ssFaultFault", Name = "businessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetOrganisationSampleinfras" +
+            "tructureFaultFault", Name = "infrastructureFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(serviceFault))]
         System.Threading.Tasks.Task<wseAdmin.organisationType> GetOrganisationSampleAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUID", ReplyAction="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUIDResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUIDsecurityFaultFault", Name="securityFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUIDbusinessFaultFault", Name="businessFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUIDinfrastructureFault" +
-            "Fault", Name="infrastructureFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+
+        /// <summary>
+        /// Gets the by u i d async.
+        /// </summary>
+        /// <param name="uid">The uid.</param>
+        /// <returns>A System.Threading.Tasks.Task&lt;wseAdmin.organisationType[]&gt;.</returns>
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUID", ReplyAction = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUIDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUIDsecurityFaultFault", Name = "securityFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUIDbusinessFaultFault", Name = "businessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/GetByUIDinfrastructureFault" +
+            "Fault", Name = "infrastructureFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(serviceFault))]
         System.Threading.Tasks.Task<wseAdmin.organisationType[]> GetByUIDAsync(wseAdmin.uidStructureType uid);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/Search", ReplyAction="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/SearchResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/SearchsecurityFaultFault", Name="securityFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/SearchbusinessFaultFault", Name="businessFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/SearchinfrastructureFaultFa" +
-            "ult", Name="infrastructureFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+
+        /// <summary>
+        /// Searches the async.
+        /// </summary>
+        /// <param name="searchParameters">The search parameters.</param>
+        /// <param name="config">The config.</param>
+        /// <returns>A System.Threading.Tasks.Task&lt;wseAdmin.uidEntitySearchResponse&gt;.</returns>
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/Search", ReplyAction = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/SearchResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/SearchsecurityFaultFault", Name = "securityFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/SearchbusinessFaultFault", Name = "businessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/SearchinfrastructureFaultFa" +
+            "ult", Name = "infrastructureFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(serviceFault))]
         System.Threading.Tasks.Task<wseAdmin.uidEntitySearchResponse> SearchAsync(wseAdmin.uidEntityPublicSearchRequest searchParameters, wseAdmin.searchConfiguration config);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumber", ReplyAction="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumberResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumbersecurityFa" +
-            "ultFault", Name="securityFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumberbusinessFa" +
-            "ultFault", Name="businessFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumberinfrastruc" +
-            "tureFaultFault", Name="infrastructureFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+
+        /// <summary>
+        /// Validates the vat number async.
+        /// </summary>
+        /// <param name="vatNumber">The vat number.</param>
+        /// <returns>A System.Threading.Tasks.Task&lt;bool&gt;.</returns>
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumber", ReplyAction = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumberResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumbersecurityFa" +
+            "ultFault", Name = "securityFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumberbusinessFa" +
+            "ultFault", Name = "businessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateVatNumberinfrastruc" +
+            "tureFaultFault", Name = "infrastructureFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(serviceFault))]
         System.Threading.Tasks.Task<bool> ValidateVatNumberAsync(string vatNumber);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUID", ReplyAction="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUIDResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUIDsecurityFaultFau" +
-            "lt", Name="securityFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUIDbusinessFaultFau" +
-            "lt", Name="businessFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action="http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUIDinfrastructureFa" +
-            "ultFault", Name="infrastructureFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+
+        /// <summary>
+        /// Validates the u i d async.
+        /// </summary>
+        /// <param name="uid">The uid.</param>
+        /// <returns>A System.Threading.Tasks.Task&lt;bool&gt;.</returns>
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUID", ReplyAction = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUIDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.securityFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUIDsecurityFaultFau" +
+            "lt", Name = "securityFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.businessFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUIDbusinessFaultFau" +
+            "lt", Name = "businessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(wseAdmin.infrastructureFault), Action = "http://www.uid.admin.ch/xmlns/uid-wse/IPublicServices/ValidateUIDinfrastructureFa" +
+            "ultFault", Name = "infrastructureFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(serviceFault))]
         System.Threading.Tasks.Task<bool> ValidateUIDAsync(string uid);
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid entity public search request.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class uidEntityPublicSearchRequest
     {
-        
         private object itemField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("otherOrganisationId", typeof(namedOrganisationIdType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("uid", typeof(uidStructureType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("uidEntitySearchParameters", typeof(uidEntityPublicSearchParameters), Order=0)]
+        /// <summary>
+        /// Gets or sets the item.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("otherOrganisationId", typeof(namedOrganisationIdType), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("uid", typeof(uidStructureType), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("uidEntitySearchParameters", typeof(uidEntityPublicSearchParameters), Order = 0)]
         public object Item
         {
             get
@@ -3816,30 +4487,35 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid entity public search parameters.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class uidEntityPublicSearchParameters
     {
-        
         private string organisationNameField;
-        
+
         private personNameType personNameField;
-        
+
         private addressSearchType addressField;
-        
+
         private string[] legalFormField;
-        
+
         private uidregInformationPublicSearchType uidregInformationField;
-        
+
         private commercialRegisterInformationSearchType commercialRegisterInformationField;
-        
+
         private vatRegisterInformationSearchType vatRegisterInformationField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the organisation name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string organisationName
         {
             get
@@ -3851,9 +4527,12 @@ namespace wseAdmin
                 this.organisationNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the person name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public personNameType personName
         {
             get
@@ -3865,9 +4544,12 @@ namespace wseAdmin
                 this.personNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets the address.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public addressSearchType address
         {
             get
@@ -3879,9 +4561,12 @@ namespace wseAdmin
                 this.addressField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("legalForm", Order=3)]
+        /// <summary>
+        /// Gets or sets the legal form.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("legalForm", Order = 3)]
         public string[] legalForm
         {
             get
@@ -3893,9 +4578,12 @@ namespace wseAdmin
                 this.legalFormField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        /// <summary>
+        /// Gets or sets the uidreg information.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
         public uidregInformationPublicSearchType uidregInformation
         {
             get
@@ -3907,9 +4595,12 @@ namespace wseAdmin
                 this.uidregInformationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        /// <summary>
+        /// Gets or sets the commercial register information.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
         public commercialRegisterInformationSearchType commercialRegisterInformation
         {
             get
@@ -3921,9 +4612,12 @@ namespace wseAdmin
                 this.commercialRegisterInformationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        /// <summary>
+        /// Gets or sets the vat register information.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 6)]
         public vatRegisterInformationSearchType vatRegisterInformation
         {
             get
@@ -3936,20 +4630,25 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The person name type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class personNameType
     {
-        
         private string officialNameField;
-        
+
         private string firstNameField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the official name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string officialName
         {
             get
@@ -3961,9 +4660,12 @@ namespace wseAdmin
                 this.officialNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the first name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string firstName
         {
             get
@@ -3976,36 +4678,41 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The address search type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class addressSearchType
     {
-        
         private string addressLine1Field;
-        
+
         private string addressLine2Field;
-        
+
         private string streetField;
-        
+
         private string houseNumberField;
-        
+
         private uint postOfficeBoxNumberField;
-        
+
         private bool postOfficeBoxNumberFieldSpecified;
-        
+
         private string townField;
-        
+
         private object[] itemsField;
-        
+
         private ItemsChoiceType2[] itemsElementNameField;
-        
+
         private string countryIdISO2Field;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+        /// <summary>
+        /// Gets or sets the address line1.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
         public string addressLine1
         {
             get
@@ -4017,9 +4724,12 @@ namespace wseAdmin
                 this.addressLine1Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+        /// <summary>
+        /// Gets or sets the address line2.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
         public string addressLine2
         {
             get
@@ -4031,9 +4741,12 @@ namespace wseAdmin
                 this.addressLine2Field = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+        /// <summary>
+        /// Gets or sets the street.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
         public string street
         {
             get
@@ -4045,9 +4758,12 @@ namespace wseAdmin
                 this.streetField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=3)]
+        /// <summary>
+        /// Gets or sets the house number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 3)]
         public string houseNumber
         {
             get
@@ -4059,9 +4775,12 @@ namespace wseAdmin
                 this.houseNumberField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        /// <summary>
+        /// Gets or sets the post office box number.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
         public uint postOfficeBoxNumber
         {
             get
@@ -4073,8 +4792,11 @@ namespace wseAdmin
                 this.postOfficeBoxNumberField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether post office box number specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool postOfficeBoxNumberSpecified
         {
@@ -4087,9 +4809,12 @@ namespace wseAdmin
                 this.postOfficeBoxNumberFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=5)]
+        /// <summary>
+        /// Gets or sets the town.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 5)]
         public string town
         {
             get
@@ -4101,14 +4826,17 @@ namespace wseAdmin
                 this.townField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EGID", typeof(uint), Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute("cantonAbbreviation", typeof(cantonAbbreviationType), Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute("foreignZipCode", typeof(string), DataType="token", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute("municipalityId", typeof(int), Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute("swissZipCode", typeof(uint), Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute("swissZipCodeAddOn", typeof(string), Order=6)]
+        /// <summary>
+        /// Gets or sets the items.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("EGID", typeof(uint), Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute("cantonAbbreviation", typeof(cantonAbbreviationType), Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute("foreignZipCode", typeof(string), DataType = "token", Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute("municipalityId", typeof(int), Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute("swissZipCode", typeof(uint), Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute("swissZipCodeAddOn", typeof(string), Order = 6)]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items
         {
@@ -4121,9 +4849,12 @@ namespace wseAdmin
                 this.itemsField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName", Order=7)]
+        /// <summary>
+        /// Gets or sets the items element name.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName", Order = 7)]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemsChoiceType2[] ItemsElementName
         {
@@ -4136,9 +4867,12 @@ namespace wseAdmin
                 this.itemsElementNameField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=8)]
+        /// <summary>
+        /// Gets or sets the country id i s o2.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 8)]
         public string countryIdISO2
         {
             get
@@ -4151,49 +4885,56 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The items choice type2.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5", IncludeInSchema=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5", IncludeInSchema = false)]
     public enum ItemsChoiceType2
     {
-        
         /// <remarks/>
         EGID,
-        
+
         /// <remarks/>
         cantonAbbreviation,
-        
+
         /// <remarks/>
         foreignZipCode,
-        
+
         /// <remarks/>
         municipalityId,
-        
+
         /// <remarks/>
         swissZipCode,
-        
+
         /// <remarks/>
         swissZipCodeAddOn,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uidreg information public search type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class uidregInformationPublicSearchType
     {
-        
         private uidregStatusEnterpriseDetailType uidregStatusEnterpriseDetailField;
-        
+
         private bool uidregStatusEnterpriseDetailFieldSpecified;
-        
+
         private bool uidregUidServiceField;
-        
+
         private bool uidregUidServiceFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the uidreg status enterprise detail.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public uidregStatusEnterpriseDetailType uidregStatusEnterpriseDetail
         {
             get
@@ -4205,8 +4946,11 @@ namespace wseAdmin
                 this.uidregStatusEnterpriseDetailField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg status enterprise detail specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool uidregStatusEnterpriseDetailSpecified
         {
@@ -4219,9 +4963,12 @@ namespace wseAdmin
                 this.uidregStatusEnterpriseDetailFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg uid service.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public bool uidregUidService
         {
             get
@@ -4233,8 +4980,11 @@ namespace wseAdmin
                 this.uidregUidServiceField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether uidreg uid service specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool uidregUidServiceSpecified
         {
@@ -4248,36 +4998,41 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The commercial register information search type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class commercialRegisterInformationSearchType
     {
-        
         private commercialRegisterStatusType commercialRegisterStatusField;
-        
+
         private bool commercialRegisterStatusFieldSpecified;
-        
+
         private commercialRegisterEntryStatusType commercialRegisterEntryStatusField;
-        
+
         private bool commercialRegisterEntryStatusFieldSpecified;
-        
+
         private System.DateTime commercialRegisterEntryDateField;
-        
+
         private bool commercialRegisterEntryDateFieldSpecified;
-        
+
         private System.DateTime commercialRegisterLiquidationDateField;
-        
+
         private bool commercialRegisterLiquidationDateFieldSpecified;
-        
+
         private commercialRegisterEnterpriseTypeType commercialRegisterEnterpriseTypeField;
-        
+
         private bool commercialRegisterEnterpriseTypeFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the commercial register status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public commercialRegisterStatusType commercialRegisterStatus
         {
             get
@@ -4289,8 +5044,11 @@ namespace wseAdmin
                 this.commercialRegisterStatusField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register status specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterStatusSpecified
         {
@@ -4303,9 +5061,12 @@ namespace wseAdmin
                 this.commercialRegisterStatusFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the commercial register entry status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public commercialRegisterEntryStatusType commercialRegisterEntryStatus
         {
             get
@@ -4317,8 +5078,11 @@ namespace wseAdmin
                 this.commercialRegisterEntryStatusField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register entry status specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterEntryStatusSpecified
         {
@@ -4331,9 +5095,12 @@ namespace wseAdmin
                 this.commercialRegisterEntryStatusFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=2)]
+        /// <summary>
+        /// Gets or sets the commercial register entry date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 2)]
         public System.DateTime commercialRegisterEntryDate
         {
             get
@@ -4345,8 +5112,11 @@ namespace wseAdmin
                 this.commercialRegisterEntryDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register entry date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterEntryDateSpecified
         {
@@ -4359,9 +5129,12 @@ namespace wseAdmin
                 this.commercialRegisterEntryDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
+        /// <summary>
+        /// Gets or sets the commercial register liquidation date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 3)]
         public System.DateTime commercialRegisterLiquidationDate
         {
             get
@@ -4373,8 +5146,11 @@ namespace wseAdmin
                 this.commercialRegisterLiquidationDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register liquidation date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterLiquidationDateSpecified
         {
@@ -4387,9 +5163,12 @@ namespace wseAdmin
                 this.commercialRegisterLiquidationDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        /// <summary>
+        /// Gets or sets the commercial register enterprise type.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
         public commercialRegisterEnterpriseTypeType commercialRegisterEnterpriseType
         {
             get
@@ -4401,8 +5180,11 @@ namespace wseAdmin
                 this.commercialRegisterEnterpriseTypeField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether commercial register enterprise type specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool commercialRegisterEnterpriseTypeSpecified
         {
@@ -4416,34 +5198,39 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The vat register information search type.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class vatRegisterInformationSearchType
     {
-        
         private vatStatusType vatStatusField;
-        
+
         private bool vatStatusFieldSpecified;
-        
+
         private vatEntryStatusType vatEntryStatusField;
-        
+
         private bool vatEntryStatusFieldSpecified;
-        
+
         private System.DateTime vatEntryDateField;
-        
+
         private bool vatEntryDateFieldSpecified;
-        
+
         private System.DateTime vatLiquidationDateField;
-        
+
         private bool vatLiquidationDateFieldSpecified;
-        
+
         private uidStructureType uidVatField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the vat status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public vatStatusType vatStatus
         {
             get
@@ -4455,8 +5242,11 @@ namespace wseAdmin
                 this.vatStatusField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether vat status specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool vatStatusSpecified
         {
@@ -4469,9 +5259,12 @@ namespace wseAdmin
                 this.vatStatusFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the vat entry status.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public vatEntryStatusType vatEntryStatus
         {
             get
@@ -4483,8 +5276,11 @@ namespace wseAdmin
                 this.vatEntryStatusField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether vat entry status specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool vatEntryStatusSpecified
         {
@@ -4497,9 +5293,12 @@ namespace wseAdmin
                 this.vatEntryStatusFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=2)]
+        /// <summary>
+        /// Gets or sets the vat entry date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 2)]
         public System.DateTime vatEntryDate
         {
             get
@@ -4511,8 +5310,11 @@ namespace wseAdmin
                 this.vatEntryDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether vat entry date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool vatEntryDateSpecified
         {
@@ -4525,9 +5327,12 @@ namespace wseAdmin
                 this.vatEntryDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
+        /// <summary>
+        /// Gets or sets the vat liquidation date.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 3)]
         public System.DateTime vatLiquidationDate
         {
             get
@@ -4539,8 +5344,11 @@ namespace wseAdmin
                 this.vatLiquidationDateField = value;
             }
         }
-        
+
         /// <remarks/>
+        /// <summary>
+        /// Gets or sets a value indicating whether vat liquidation date specified.
+        /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool vatLiquidationDateSpecified
         {
@@ -4553,9 +5361,12 @@ namespace wseAdmin
                 this.vatLiquidationDateFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        /// <summary>
+        /// Gets or sets the uid vat.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
         public uidStructureType uidVat
         {
             get
@@ -4568,22 +5379,27 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The search configuration.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
     public partial class searchConfiguration
     {
-        
         private searchMode searchModeField;
-        
+
         private int maxNumberOfRecordsField;
-        
+
         private bool searchNameAndAddressHistoryField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the search mode.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public searchMode searchMode
         {
             get
@@ -4595,9 +5411,12 @@ namespace wseAdmin
                 this.searchModeField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the max number of records.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public int maxNumberOfRecords
         {
             get
@@ -4609,9 +5428,12 @@ namespace wseAdmin
                 this.maxNumberOfRecordsField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets a value indicating whether search name and address history.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public bool searchNameAndAddressHistory
         {
             get
@@ -4624,39 +5446,46 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The search mode.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse-shared/2")]
     public enum searchMode
     {
-        
         /// <remarks/>
         Auto,
-        
+
         /// <remarks/>
         Normal,
-        
+
         /// <remarks/>
         Fuzzy,
-        
+
         /// <remarks/>
         FuzzyPerson,
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid entity search response.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class uidEntitySearchResponse
     {
-        
         private uidEntitySearchResultItem[] uidEntitySearchResultItemField;
-        
+
         private object extensionField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("uidEntitySearchResultItem", Order=0)]
+        /// <summary>
+        /// Gets or sets the uid entity search result item.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute("uidEntitySearchResultItem", Order = 0)]
         public uidEntitySearchResultItem[] uidEntitySearchResultItem
         {
             get
@@ -4668,9 +5497,12 @@ namespace wseAdmin
                 this.uidEntitySearchResultItemField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the extension.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public object extension
         {
             get
@@ -4683,24 +5515,29 @@ namespace wseAdmin
             }
         }
     }
-    
+
     /// <remarks/>
+    /// <summary>
+    /// The uid entity search result item.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.uid.admin.ch/xmlns/uid-wse/5")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.uid.admin.ch/xmlns/uid-wse/5")]
     public partial class uidEntitySearchResultItem
     {
-        
         private organisationType organisationField;
-        
+
         private int ratingField;
-        
+
         private bool isHistoryMatchField;
-        
+
         private object extensionField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        /// <summary>
+        /// Gets or sets the organisation.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public organisationType organisation
         {
             get
@@ -4712,9 +5549,12 @@ namespace wseAdmin
                 this.organisationField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        /// <summary>
+        /// Gets or sets the rating.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public int rating
         {
             get
@@ -4726,9 +5566,12 @@ namespace wseAdmin
                 this.ratingField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        /// <summary>
+        /// Gets or sets a value indicating whether history is match.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
         public bool isHistoryMatch
         {
             get
@@ -4740,9 +5583,12 @@ namespace wseAdmin
                 this.isHistoryMatchField = value;
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        /// <summary>
+        /// Gets or sets the extension.
+        /// </summary>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
         public object extension
         {
             get
@@ -4755,87 +5601,145 @@ namespace wseAdmin
             }
         }
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     public interface IPublicServicesChannel : wseAdmin.IPublicServices, System.ServiceModel.IClientChannel
     {
     }
-    
+
+    /// <summary>
+    /// The public services client.
+    /// </summary>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     public partial class PublicServicesClient : System.ServiceModel.ClientBase<wseAdmin.IPublicServices>, wseAdmin.IPublicServices
     {
-        
         /// <summary>
         /// Implémentez cette méthode partielle pour configurer le point de terminaison de service.
         /// </summary>
         /// <param name="serviceEndpoint">Point de terminaison à configurer</param>
         /// <param name="clientCredentials">Informations d'identification du client</param>
-        static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
-        
-        public PublicServicesClient() : 
+        private static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PublicServicesClient"/> class.
+        /// </summary>
+        public PublicServicesClient() :
                 base(PublicServicesClient.GetDefaultBinding(), PublicServicesClient.GetDefaultEndpointAddress())
         {
             this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_IPublicServices.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public PublicServicesClient(EndpointConfiguration endpointConfiguration) : 
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PublicServicesClient"/> class.
+        /// </summary>
+        /// <param name="endpointConfiguration">The endpoint configuration.</param>
+        public PublicServicesClient(EndpointConfiguration endpointConfiguration) :
                 base(PublicServicesClient.GetBindingForEndpoint(endpointConfiguration), PublicServicesClient.GetEndpointAddress(endpointConfiguration))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public PublicServicesClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PublicServicesClient"/> class.
+        /// </summary>
+        /// <param name="endpointConfiguration">The endpoint configuration.</param>
+        /// <param name="remoteAddress">The remote address.</param>
+        public PublicServicesClient(EndpointConfiguration endpointConfiguration, string remoteAddress) :
                 base(PublicServicesClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public PublicServicesClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PublicServicesClient"/> class.
+        /// </summary>
+        /// <param name="endpointConfiguration">The endpoint configuration.</param>
+        /// <param name="remoteAddress">The remote address.</param>
+        public PublicServicesClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(PublicServicesClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public PublicServicesClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PublicServicesClient"/> class.
+        /// </summary>
+        /// <param name="binding">The binding.</param>
+        /// <param name="remoteAddress">The remote address.</param>
+        public PublicServicesClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)
         {
         }
-        
+
+        /// <summary>
+        /// Gets the organisation sample async.
+        /// </summary>
+        /// <returns>A System.Threading.Tasks.Task&lt;wseAdmin.organisationType&gt;.</returns>
         public System.Threading.Tasks.Task<wseAdmin.organisationType> GetOrganisationSampleAsync()
         {
             return base.Channel.GetOrganisationSampleAsync();
         }
-        
+
+        /// <summary>
+        /// Gets the by u i d async.
+        /// </summary>
+        /// <param name="uid">The uid.</param>
+        /// <returns>A System.Threading.Tasks.Task&lt;wseAdmin.organisationType[]&gt;.</returns>
         public System.Threading.Tasks.Task<wseAdmin.organisationType[]> GetByUIDAsync(wseAdmin.uidStructureType uid)
         {
             return base.Channel.GetByUIDAsync(uid);
         }
-        
+
+        /// <summary>
+        /// Searches the async.
+        /// </summary>
+        /// <param name="searchParameters">The search parameters.</param>
+        /// <param name="config">The config.</param>
+        /// <returns>A System.Threading.Tasks.Task&lt;wseAdmin.uidEntitySearchResponse&gt;.</returns>
         public System.Threading.Tasks.Task<wseAdmin.uidEntitySearchResponse> SearchAsync(wseAdmin.uidEntityPublicSearchRequest searchParameters, wseAdmin.searchConfiguration config)
         {
             return base.Channel.SearchAsync(searchParameters, config);
         }
-        
+
+        /// <summary>
+        /// Validates the vat number async.
+        /// </summary>
+        /// <param name="vatNumber">The vat number.</param>
+        /// <returns>A System.Threading.Tasks.Task&lt;bool&gt;.</returns>
         public System.Threading.Tasks.Task<bool> ValidateVatNumberAsync(string vatNumber)
         {
             return base.Channel.ValidateVatNumberAsync(vatNumber);
         }
-        
+
+        /// <summary>
+        /// Validates the u i d async.
+        /// </summary>
+        /// <param name="uid">The uid.</param>
+        /// <returns>A System.Threading.Tasks.Task&lt;bool&gt;.</returns>
         public System.Threading.Tasks.Task<bool> ValidateUIDAsync(string uid)
         {
             return base.Channel.ValidateUIDAsync(uid);
         }
-        
+
+        /// <summary>
+        /// Opens the async.
+        /// </summary>
+        /// <returns>A System.Threading.Tasks.Task.</returns>
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
         }
-        
+
+        /// <summary>
+        /// Gets the binding for endpoint.
+        /// </summary>
+        /// <param name="endpointConfiguration">The endpoint configuration.</param>
+        /// <returns>A System.ServiceModel.Channels.Binding.</returns>
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IPublicServices))
@@ -4850,7 +5754,12 @@ namespace wseAdmin
             }
             throw new System.InvalidOperationException(string.Format("Le point de terminaison nommé \'{0}\' est introuvable.", endpointConfiguration));
         }
-        
+
+        /// <summary>
+        /// Gets the endpoint address.
+        /// </summary>
+        /// <param name="endpointConfiguration">The endpoint configuration.</param>
+        /// <returns>A System.ServiceModel.EndpointAddress.</returns>
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IPublicServices))
@@ -4859,20 +5768,30 @@ namespace wseAdmin
             }
             throw new System.InvalidOperationException(string.Format("Le point de terminaison nommé \'{0}\' est introuvable.", endpointConfiguration));
         }
-        
+
+        /// <summary>
+        /// Gets the default binding.
+        /// </summary>
+        /// <returns>A System.ServiceModel.Channels.Binding.</returns>
         private static System.ServiceModel.Channels.Binding GetDefaultBinding()
         {
             return PublicServicesClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_IPublicServices);
         }
-        
+
+        /// <summary>
+        /// Gets the default endpoint address.
+        /// </summary>
+        /// <returns>A System.ServiceModel.EndpointAddress.</returns>
         private static System.ServiceModel.EndpointAddress GetDefaultEndpointAddress()
         {
             return PublicServicesClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_IPublicServices);
         }
-        
+
+        /// <summary>
+        /// The endpoint configuration.
+        /// </summary>
         public enum EndpointConfiguration
         {
-            
             BasicHttpBinding_IPublicServices,
         }
     }

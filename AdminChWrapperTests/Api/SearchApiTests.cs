@@ -3,11 +3,21 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AdminChWrapper.Api.Tests
 {
+    /// <summary>
+    /// The search api tests.
+    /// </summary>
     [TestClass()]
     public class SearchApiTests
     {
+        /// <summary>
+        /// Gets or sets the _api.
+        /// </summary>
         private static SearchApi _api { get; set; }
 
+        /// <summary>
+        /// Classes the init.
+        /// </summary>
+        /// <param name="context">The context.</param>
         [ClassInitialize()]
         public static void ClassInit(TestContext context)
         {
@@ -15,6 +25,11 @@ namespace AdminChWrapper.Api.Tests
         }
 
 
+        /// <summary>
+        /// Vats the search test.
+        /// </summary>
+        /// <param name="vat">The vat.</param>
+        /// <param name="expected">The expected.</param>
         [TestMethod()]
         [DataRow("103167648", 103167648)]
         [DataRow("CHE103167648", 103167648)]
@@ -34,6 +49,10 @@ namespace AdminChWrapper.Api.Tests
             Assert.AreEqual(_api.VatSearch<Company>(vat).Id, expected);
         }
 
+        /// <summary>
+        /// Vats the search fail test.
+        /// </summary>
+        /// <param name="vat">The vat.</param>
         [TestMethod()]
         [DataRow(" CHE-100 000.000 ")]
         public void VatSearchFailTest(string vat)
