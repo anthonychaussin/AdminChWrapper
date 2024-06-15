@@ -4,6 +4,16 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RepositoryUrl>https://github.com/anthonychaussin/AdminChWrapper</RepositoryUrl>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>AdminChWrapper</Title>
+    <Authors>Anthony Chaussin</Authors>
+    <Description>The AdminChWrapper is a .NET C# library designed to simplify the interaction with the Swiss Registre IDE@OFS API. This library provides an easy-to-use interface to access and manage commercial registry data.</Description>
+    <Copyright>Copyright (c) 2024 Anthony Chaussin</Copyright>
+    <PackageProjectUrl>https://github.com/anthonychaussin/AdminChWrapper</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +26,24 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.10.*" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.10.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="System.CodeDom.Compiler" />
+    <Using Include="System.Xml.Serialization" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

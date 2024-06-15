@@ -1,10 +1,7 @@
-﻿global using System.CodeDom.Compiler;
-global using System.Xml;
-global using System.Xml.Serialization;
-using System.ServiceModel;
+﻿using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
-
+using System.Xml;
 using WseAdmin.Models.UidEntity;
 
 namespace WseAdmin.Models
