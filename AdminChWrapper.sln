@@ -5,7 +5,12 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminChWrapper", "AdminChWrapper\AdminChWrapper.csproj", "{FF01851F-A849-419B-8A79-50B35A3F2453}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminChWrapperTests", "AdminChWrapperTests\AdminChWrapperTests.csproj", "{F3315045-94F9-4180-B8DC-FFE1A3A08F1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminChWrapperTests", "AdminChWrapperTests\AdminChWrapperTests.csproj", "{F3315045-94F9-4180-B8DC-FFE1A3A08F1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{60DEED4D-7855-4DCD-8369-9CDC8A5DFE02}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

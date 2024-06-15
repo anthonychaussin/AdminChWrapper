@@ -1,8 +1,12 @@
 ﻿using AdminChWrapper.Models;
 using Newtonsoft.Json;
+using System.ServiceModel;
 using System.Text;
 using System.Text.RegularExpressions;
-using wseAdmin;
+using WseAdmin.Enums;
+using WseAdmin.Models;
+using WseAdmin.Models.Organisation;
+using WseAdmin.Models.UidEntity;
 
 namespace AdminChWrapper.Api
 {
@@ -17,7 +21,12 @@ namespace AdminChWrapper.Api
         /// <summary>
         /// Gets or sets the organizations.
         /// </summary>
-        public Dictionary<int, organisationType> Organizations { get; set; } = [];
+        public Dictionary<int, Organisation> Organizations { get; set; } = [];
+
+        /// <summary>
+        /// Gets the client base.
+        /// </summary>
+        public PublicServicesClient ClientBase { get; }
 
         /// <summary>
         /// Gets or sets the bad v a t.
@@ -27,18 +36,19 @@ namespace AdminChWrapper.Api
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchApi"/> class.
         /// </summary>
-        public SearchApi()
-        {
-            Organizations = LoadJson().ToDictionary(o => int.Parse(o.organisation.organisationIdentification.uid.uidOrganisationId), o => o);
-        }
+        public SearchApi() : this(LoadJson()) { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchApi"/> class.
         /// </summary>
         /// <param name="organisations">The organisations.</param>
-        public SearchApi(List<organisationType> organisations)
+        public SearchApi(List<Organisation> organisations)
         {
             Organizations = organisations.ToDictionary(o => int.Parse(o.organisation.organisationIdentification.uid.uidOrganisationId), o => o);
+            ClientBase = new PublicServicesClient()
+            {
+
+            };
         }
 
         /// <summary>
@@ -47,9 +57,9 @@ namespace AdminChWrapper.Api
         /// <param name="searchRequest">The search request.</param>
         /// <param name="searchConfiguration">The search configuration.</param>
         /// <returns>A Task.</returns>
-        public static Task<uidEntitySearchResponse> Search(uidEntityPublicSearchRequest searchRequest, searchConfiguration searchConfiguration)
+        public Task<UidEntitySearchResponse> Search(UidEntityPublicSearchRequest searchRequest, SearchConfiguration searchConfiguration)
         {
-            return new PublicServicesClient().SearchAsync(searchRequest, searchConfiguration);
+            return ClientBase.SearchAsync(searchRequest, searchConfiguration);
         }
 
         /// <summary>
@@ -59,53 +69,41 @@ namespace AdminChWrapper.Api
         /// <returns>A T.</returns>
         public T VatSearch<T>(int vatIDE) where T : IOrganisation
         {
-            if (Organizations.Count > 0 && Organizations.TryGetValue(vatIDE, out var organisationFinded))
-            {
-                return typeof(T) == typeof(organisationType) ? (T)(object)organisationFinded : (T)(object)new Company(organisationFinded);
-            }
-
             if (BadVAT.Contains(vatIDE))
             {
                 throw new Exception("Vat number is incorect or not accessible");
             }
 
-            var isValide = false;
-            try
+            if (Organizations.Count == 0 || !Organizations.TryGetValue(vatIDE, value: out Organisation organisationFinded))
             {
-                isValide = new PublicServicesClient().ValidateUIDAsync("CHE" + vatIDE).Result;
-            }
-            catch { }
+                if (!ClientBase.ValidateUIDAsync("CHE" + vatIDE).Result)
+                {
+                    BadVAT.Add(vatIDE);
+                    throw new Exception("Vat number is incorect or not accessible");
+                }
 
-            if (isValide)
-            {
                 try
                 {
-                    var result = Search(
-                new uidEntityPublicSearchRequest
-                {
-                    Item = new uidStructureType { uidOrganisationId = vatIDE.ToString() },
-                },
-                new searchConfiguration
-                {
-                    searchMode = searchMode.Auto,
-                    maxNumberOfRecords = 1,
-                    searchNameAndAddressHistory = false,
-                }).Result.uidEntitySearchResultItem.First().organisation;
+                    organisationFinded = Search(new UidEntityPublicSearchRequest
+                    {
+                        Item = new UidStructure { uidOrganisationId = vatIDE.ToString() },
+                    },
+                    new SearchConfiguration
+                    {
+                        searchMode = SearchMode.Auto,
+                        maxNumberOfRecords = 1,
+                        searchNameAndAddressHistory = false,
+                    }).Result.uidEntitySearchResultItem[0].organisation;
 
-                    AddToOrganisation(int.Parse(result.organisation.organisationIdentification.uid.uidOrganisationId), result);
-
-                    return typeof(T) == typeof(organisationType) ? (T)(object)result : (T)(object)new Company(result);
+                    AddToOrganisation(int.Parse(organisationFinded.organisation.organisationIdentification.uid.uidOrganisationId), organisationFinded);
                 }
-                catch
+                catch(FaultException e)
                 {
-                    throw new Exception("Vat number not found");
+                    throw new Exception("Vat number not found", e);
                 }
             }
-            else
-            {
-                BadVAT.Add(vatIDE);
-                throw new Exception("Vat number is incorect or not accessible");
-            }
+
+            return typeof(T) == typeof(Organisation) ? (T)(object)organisationFinded : (T)(object)Company.CompanyFromOrganistation(organisationFinded);
         }
 
         /// <summary>
@@ -115,9 +113,9 @@ namespace AdminChWrapper.Api
         /// <returns>A T.</returns>
         public T VatSearch<T>(string vatIDE) where T : IOrganisation
         {
-            var organisation = VatSearch<organisationType>(int.Parse(VATParser().Replace(vatIDE.ToLower(), String.Empty)));
+            var organisation = VatSearch<Organisation>(int.Parse(VATParser().Replace(vatIDE.ToLower(), String.Empty)));
 
-            return typeof(T) == typeof(organisationType) ? (T)(object)organisation : (T)(object)new Company(organisation);
+            return typeof(T) == typeof(Organisation) ? (T)(object)organisation : (T)(object)Company.CompanyFromOrganistation(organisation);
         }
 
         /// <summary>
@@ -134,11 +132,11 @@ namespace AdminChWrapper.Api
         /// Loads the json.
         /// </summary>
         /// <returns>A list of organisationTypes.</returns>
-        private static List<organisationType> LoadJson()
+        private static List<Organisation> LoadJson()
         {
             using (var r = new StreamReader(JSON_PATH))
             {
-                return JsonConvert.DeserializeObject<List<organisationType>>(r.ReadToEnd()) ?? [];
+                return JsonConvert.DeserializeObject<List<Organisation>>(r.ReadToEnd()) ?? [];
             }
         }
 
@@ -147,18 +145,16 @@ namespace AdminChWrapper.Api
         /// </summary>
         /// <param name="organisationId">The organisation id.</param>
         /// <param name="organisation">The organisation.</param>
-        private void AddToOrganisation(int organisationId, organisationType organisation)
+        private void AddToOrganisation(int organisationId, Organisation organisation)
         {
             if (this.Organizations.TryAdd(organisationId, organisation))
             {
-                using (var fs = File.Open(JSON_PATH, FileMode.Open))
-                {
-                    fs.Seek(-1, SeekOrigin.End);
-                    var mySerializedJSONObjAsBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(organisation));
-                    fs.Write(mySerializedJSONObjAsBytes, 0, mySerializedJSONObjAsBytes.Length);
-                    fs.Write(BRACKETBYTE, 0, 1);
-                    fs.SetLength(fs.Position);
-                }
+                using FileStream fs = File.Open(JSON_PATH, FileMode.Open);
+                _ = fs.Seek(-1, SeekOrigin.End);
+                Byte[] mySerializedJSONObjAsBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(organisation));
+                fs.Write(mySerializedJSONObjAsBytes, 0, mySerializedJSONObjAsBytes.Length);
+                fs.Write(BRACKETBYTE, 0, 1);
+                fs.SetLength(fs.Position);
             }
         }
 

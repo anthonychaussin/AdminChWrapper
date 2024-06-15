@@ -29,5 +29,14 @@
         /// Gets or sets the town.
         /// </summary>
         public string? Town { get; set; }
+
+        /// <summary>
+        /// To the string.
+        /// </summary>
+        /// <returns>A String.</returns>
+        public override String ToString()
+        {
+            return $"{Line1}, {(Line2 is not null ? (Line2 + ", ") : "")}{Street} {Number}, {Town}";
+        }
     }
 }

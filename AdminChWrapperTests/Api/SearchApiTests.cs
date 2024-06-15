@@ -1,5 +1,6 @@
 ﻿using AdminChWrapper.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.ServiceModel;
 
 namespace AdminChWrapper.Api.Tests
 {
@@ -12,18 +13,13 @@ namespace AdminChWrapper.Api.Tests
         /// <summary>
         /// Gets or sets the _api.
         /// </summary>
-        private static SearchApi _api { get; set; }
+        private static SearchApi? Api { get; set; }
 
         /// <summary>
         /// Classes the init.
         /// </summary>
-        /// <param name="context">The context.</param>
         [ClassInitialize()]
-        public static void ClassInit(TestContext context)
-        {
-            _api = new SearchApi();
-        }
-
+        public static void ClassInit(TestContext testContext) => Api = new SearchApi();
 
         /// <summary>
         /// Vats the search test.
@@ -44,10 +40,7 @@ namespace AdminChWrapper.Api.Tests
         [DataRow("CHE103.167.648", 103167648)]
         [DataRow("103167648.", 103167648)]
         [DataRow(" CHE-103 167.648 ", 103167648)]
-        public void VatSearchTest(string vat, int expected)
-        {
-            Assert.AreEqual(_api.VatSearch<Company>(vat).Id, expected);
-        }
+        public void VatSearchTest(string vat, int expected) => Assert.AreEqual(expected, Api?.VatSearch<Company>(vat).Id);
 
         /// <summary>
         /// Vats the search fail test.
@@ -55,9 +48,6 @@ namespace AdminChWrapper.Api.Tests
         /// <param name="vat">The vat.</param>
         [TestMethod()]
         [DataRow(" CHE-100 000.000 ")]
-        public void VatSearchFailTest(string vat)
-        {
-            Assert.ThrowsException<Exception>(() =>_api.VatSearch<Company>(vat));
-        }
+        public void VatSearchFailTest(string vat) => Assert.ThrowsException<AggregateException>(() => Api?.VatSearch<Company>(vat));
     }
 }

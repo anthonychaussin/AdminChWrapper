@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using wseAdmin;
+using WseAdmin.Models.Organisation;
 
 namespace AdminChWrapper.Models
 {
@@ -37,27 +37,32 @@ namespace AdminChWrapper.Models
         /// Gets the normalized v a t.
         /// </summary>
         public string NormalizedVAT
-        { get { return "CHE-" + this.Id.ToString().Substring(0, 3) + '.' + this.Id.ToString().Substring(3, 3) + '.' + this.Id.ToString().Substring(6, 3); } }
+        { get { return "CHE-" + this.Id.ToString()[..3] + '.' + this.Id.ToString().Substring(3, 3) + '.' + this.Id.ToString().Substring(6, 3); } }
+
+        public Company() { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Company"/> class.
         /// </summary>
         /// <param name="organisationType">The organisation type.</param>
-        public Company(organisationType organisationType)
+        public static Company CompanyFromOrganistation(Organisation organisationType)
         {
             var organisation = organisationType.organisation;
-            Id = int.Parse(organisation.organisationIdentification.uid.uidOrganisationId);
-            Name = organisation.organisationIdentification.organisationName;
-            LegalName = organisation.organisationIdentification.organisationLegalName;
-            TranslatedNames = ListTranslatedNameParser(organisationType.commercialRegisterInformation?.commercialRegisterNameTranslation);
             var address = organisation.address.First();
-            Address = new Address
+            return new Company
             {
-                Line1 = address.addressLine1,
-                Line2 = address.addressLine2,
-                Street = address.street,
-                Number = address.houseNumber,
-                Town = address.town,
+                Id = int.Parse(organisation.organisationIdentification.uid.uidOrganisationId),
+                Name = organisation.organisationIdentification.organisationName,
+                LegalName = organisation.organisationIdentification.organisationLegalName,
+                TranslatedNames = ListTranslatedNameParser(organisationType.commercialRegisterInformation?.commercialRegisterNameTranslation),
+                Address = new Address
+                {
+                    Line1 = address.addressLine1,
+                    Line2 = address.addressLine2,
+                    Street = address.street,
+                    Number = address.houseNumber,
+                    Town = address.town,
+                }
             };
         }
 
@@ -66,13 +71,9 @@ namespace AdminChWrapper.Models
         /// </summary>
         /// <param name="translatedNames">The translated names.</param>
         /// <returns>A list of string.</returns>
-        public static List<string> ListTranslatedNameParser(string? translatedNames)
-        {
-            if (translatedNames is null)
-                return [];
-
-            return TranslatedNamesSplitter().Replace(translatedNames, " § ").Split(" § ").ToList().ConvertAll(n => n.Trim('(').Trim(')').Trim());
-        }
+        public static List<string> ListTranslatedNameParser(string? translatedNames) => translatedNames is null
+                ? (List<String>)([])
+                : TranslatedNamesSplitter().Replace(translatedNames, " § ").Split(" § ").ToList().ConvertAll(n => n.Trim('(').Trim(')').Trim());
 
         /// <summary>
         /// Translateds the names splitter.
